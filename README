@@ -1,0 +1,21 @@
+introduction
+For this assignment, you must write an SQL script. An SQL script is a text file that contains a sequence of
+SQL commands to be run. Yours should include commands for each of the following, in order:
+1 Run a statement that will remove all of the tables that will be created below. This will allow the script
+to be run again without any errors caused by existing tables.
+2 Create a table called Dog with a dog id, a breed, a name, and a weight. The id of the dog should be the
+primary key, and should be automatically assigned the next available value when inserting a new row
+into the table.
+3 Put six rows into the Dog table with example data. Make up the data yourself.
+4 Run the command DESCRIBE Dog;
+5 Run the command SELECT * FROM Dog;
+6 Create a table called Visit that contains a visit id as primary key (this should take the next available
+key value when a new row is added). It should also have a foreign key that references a row in the dog
+table, and attributes to hold the date that the visit took place and how long it lasted.
+7 Put exactly nine new rows into the Visit table. Since there are only five dogs, this means that some
+dogs will have multiple visits.
+8 Run the command DESCRIBE Visit;
+9 Run the command SELECT * FROM Visit;
+10 Add a column to the Visit table to hold how much the veterinarian is billing for the visit.
+11 Change the value for the newly-added attribute in several of the existing rows. There are several
+date/time functions available in SQL, and you can choose

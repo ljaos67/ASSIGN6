@@ -1,0 +1,118 @@
+-- Leonart Jaos | Z1911688
+-- 02/26/20
+-- CSCI 466 SECTION 0001
+-- ASSIGN 6 OUTPUT FILE
+MariaDB [z1911688]> \. ASSIGN6.sql
+Query OK, 0 rows affected (0.094 sec)
+
+Query OK, 0 rows affected (0.071 sec)
+
+Query OK, 0 rows affected (0.259 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.050 sec)
+
+Query OK, 1 row affected (0.050 sec)
+
+Query OK, 1 row affected (0.042 sec)
+
+Query OK, 1 row affected (0.042 sec)
+
++--------+----------+------+-----+---------+----------------+
+| Field  | Type     | Null | Key | Default | Extra          |
++--------+----------+------+-----+---------+----------------+
+| Dogid  | int(11)  | NO   | PRI | NULL    | auto_increment |
+| breed  | char(50) | NO   |     | NULL    |                |
+| name   | char(20) | NO   |     | NULL    |                |
+| weight | int(11)  | YES  |     | NULL    |                |
++--------+----------+------+-----+---------+----------------+
+4 rows in set (0.001 sec)
+
++-------+------------------+-------+--------+
+| Dogid | breed            | name  | weight |
++-------+------------------+-------+--------+
+|     1 | Golden Retriever | Lily  |     70 |
+|     2 | Labrador         | Annie |     65 |
+|     3 | Bulldog          | Jerry |     50 |
+|     4 | Bull Terrier     | Ozzy  |     62 |
+|     5 | Pug              | Tommy |     16 |
+|     6 | Maltese          | Pip   |      5 |
++-------+------------------+-------+--------+
+6 rows in set (0.001 sec)
+
+Query OK, 0 rows affected (0.210 sec)
+
+Query OK, 1 row affected (0.039 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
+Query OK, 1 row affected (0.025 sec)
+
++-------------+---------+------+-----+---------+----------------+
+| Field       | Type    | Null | Key | Default | Extra          |
++-------------+---------+------+-----+---------+----------------+
+| Visitid     | int(11) | NO   | PRI | NULL    | auto_increment |
+| Appointment | date    | NO   |     | NULL    |                |
+| Duration    | int(11) | NO   |     | NULL    |                |
+| Dogid       | int(11) | NO   | MUL | NULL    |                |
++-------------+---------+------+-----+---------+----------------+
+4 rows in set (0.002 sec)
+
++---------+-------------+----------+-------+
+| Visitid | Appointment | Duration | Dogid |
++---------+-------------+----------+-------+
+|       1 | 2021-01-20  |        1 |     1 |
+|       2 | 2021-01-20  |        2 |     3 |
+|       3 | 2021-01-20  |        1 |     2 |
+|       4 | 2021-01-21  |        1 |     2 |
+|       5 | 2021-01-22  |        2 |     5 |
+|       6 | 2021-01-22  |        1 |     4 |
+|       7 | 2021-01-25  |        1 |     1 |
+|       8 | 2021-01-25  |        1 |     6 |
+|       9 | 2021-01-25  |        1 |     4 |
++---------+-------------+----------+-------+
+9 rows in set (0.000 sec)
+
+Query OK, 0 rows affected (0.492 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+Query OK, 2 rows affected (0.036 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+Query OK, 2 rows affected (0.025 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+Query OK, 5 rows affected (0.025 sec)
+Rows matched: 5  Changed: 5  Warnings: 0
+
++---------+-------------+----------+-------+--------+
+| Visitid | Appointment | Duration | Dogid | Charge |
++---------+-------------+----------+-------+--------+
+|       1 | 2021-01-20  |        1 |     1 |    150 |
+|       2 | 2021-01-20  |        2 |     3 |    150 |
+|       3 | 2021-01-20  |        1 |     2 |    150 |
+|       4 | 2021-01-21  |        1 |     2 |    150 |
+|       5 | 2021-01-22  |        2 |     5 |    100 |
+|       6 | 2021-01-22  |        1 |     4 |    200 |
+|       7 | 2021-01-25  |        1 |     1 |    150 |
+|       8 | 2021-01-25  |        1 |     6 |    100 |
+|       9 | 2021-01-25  |        1 |     4 |    200 |
++---------+-------------+----------+-------+--------+
+9 rows in set (0.001 sec)
+
+MariaDB [z1911688]> \t
